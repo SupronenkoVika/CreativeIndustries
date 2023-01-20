@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreativeIndustries.API.DXS\CreativeIndustries.API.DXS.csproj" />
+    <ProjectReference Include="..\CreativeIndustries.DS.Contracts\CreativeIndustries.DS.Contracts.csproj" />
+    <ProjectReference Include="..\CreativeIndustries.DS.EF\CreativeIndustries.DS.EF.csproj" />
+    <ProjectReference Include="..\CreativeIndustries.DS.Entities\CreativeIndustries.DS.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
