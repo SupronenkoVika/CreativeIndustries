@@ -1,6 +1,8 @@
-﻿namespace CreativeIndustries.API.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace CreativeIndustries.API.Controllers
 {
-    public class AccountController
+    public class AccountController : Controller
     {
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace CreativeIndustries.API.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace CreativeIndustries.API.Controllers
 {
-    public class SelectLanguageController
+    public class SelectLanguageController : Controller
     {
         // Eng/by
     }
