@@ -1,9 +1,7 @@
-﻿using CreativeIndustries.API.DXS;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace AsparagusEaters.Controllers
+namespace CreativeIndustries
 {
     public class HomeController : Controller
     {

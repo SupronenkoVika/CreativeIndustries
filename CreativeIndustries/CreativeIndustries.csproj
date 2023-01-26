@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CreativeIndustries.API.DXS\CreativeIndustries.API.DXS.csproj" />
+    <ProjectReference Include="..\CreativeIndustries.API\CreativeIndustries.API.csproj" />
     <ProjectReference Include="..\CreativeIndustries.DS.DB.EF\CreativeIndustries.DS.DB.EF.csproj" />
   </ItemGroup>
 

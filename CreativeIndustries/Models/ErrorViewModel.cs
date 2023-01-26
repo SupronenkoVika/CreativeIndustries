@@ -1,4 +1,4 @@
-namespace CreativeIndustries.API.DXS
+namespace CreativeIndustries
 {
     public class ErrorViewModel
     {
