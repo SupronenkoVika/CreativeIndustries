@@ -1,7 +1,12 @@
-﻿namespace CreativeIndustries.DS.EF
+﻿using CreativeIndustries.DS.Contracts;
+
+namespace CreativeIndustries.DS.EF
 {
-    //Used when company creates an event
-    public class MessageService
+    public class MessageService : IEmailSender
     {
+        public async Task SendEmailAsync(string email, string subject, string message)
+        {
+        }
     }
 }
+

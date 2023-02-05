@@ -1,4 +1,4 @@
-﻿namespace CreativeIndustries.API.DXS.ActionViewModels
+﻿namespace CreativeIndustries.API.DXS.AccountViewModels
 {
     public class ForgotPasswordViewModel
     {
