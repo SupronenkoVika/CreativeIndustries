@@ -1,19 +1,25 @@
 using CreativeIndustries.API.Controllers;
+using CreativeIndustries.DS.Contracts;
 using CreativeIndustries.DS.DB.EF;
+using CreativeIndustries.DS.EF;
 using CreativeIndustries.DS.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+services.AddControllersWithViews();
+//services.Configure<MailSettings>(builder.Configuration.GetSection(nameof(MailSettings)));
+services.AddTransient<IMailService, MailService>();
+builder.Configuration.GetSection("MailData");
 
 var connectStr = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<CompanyDBContext>(opts => opts.UseSqlServer(connectStr));
-builder.Services.AddDbContext<AppUserDBContext>(opts => opts.UseSqlServer(connectStr));
+services.AddDbContext<CompanyDBContext>(opts => opts.UseSqlServer(connectStr));
+services.AddDbContext<AppUserDBContext>(opts => opts.UseSqlServer(connectStr));
 
-builder.Services.AddIdentity<User, IdentityRole>(opts =>
+services.AddIdentity<User, IdentityRole>(opts =>
     {
         opts.Password.RequiredLength = 6;
         opts.Password.RequireLowercase = true;
@@ -23,7 +29,8 @@ builder.Services.AddIdentity<User, IdentityRole>(opts =>
     })
     .AddEntityFrameworkStores<AppUserDBContext>();
 
-builder.Services.AddControllers().AddApplicationPart(typeof(AccountController).Assembly); // How to add all solution controllers?
+services.AddControllers().AddApplicationPart(typeof(AccountController).Assembly); // How to add all solution controllers?
+
 
 
 var app = builder.Build();
