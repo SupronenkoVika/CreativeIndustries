@@ -3,6 +3,6 @@ namespace CreativeIndustries.DS.Contracts
 {
     public interface IMailService
     {
-        public bool Send(MailData mailData);
+        public bool Send(MailDataViewModel mailData);
     }
 }

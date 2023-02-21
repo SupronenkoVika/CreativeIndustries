@@ -22,7 +22,7 @@ namespace CreativeIndustries.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult SendMail(MailData emailData)
+        public IActionResult SendMail(MailDataViewModel emailData)
         {
             bool result = _mail.Send(emailData);
             if (result)
