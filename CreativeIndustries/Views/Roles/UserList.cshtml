@@ -1,4 +1,6 @@
-﻿@model IEnumerable<CreativeIndustries.DS.Entities.User>
+﻿@using CreativeIndustries.Resources
+@model IEnumerable<CreativeIndustries.DS.Entities.User>
+@inject LocService SharedLocalizer
 
 <h2>Users list</h2>
 <table class="table">
@@ -7,7 +9,7 @@
         <tr>
             <td>@user.Email</td>
             <td>
-                <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Access rights</a>
+                <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">@SharedLocalizer.GetLocalizedHtmlString("accessRights")</a>
             </td>
         </tr>
     }

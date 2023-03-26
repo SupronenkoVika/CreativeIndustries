@@ -14,9 +14,11 @@ namespace CreativeIndustries.API.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
-        public IActionResult Index() => View(_roleManager.Roles.ToList());
-        //public IActionResult Create() => View();
 
+        public IActionResult Index() => View(_roleManager.Roles.ToList());
+        public IActionResult Create() => View();
+
+        [HttpPost]
         public async Task<IActionResult> Create(string name)
         {
             if (!string.IsNullOrEmpty(name))
@@ -48,15 +50,13 @@ namespace CreativeIndustries.API.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult UserList() => View(_userManager.Users.ToList());
-
-        public async Task<IActionResult> Edit(string userId)
+        public IActionResult UserList() => View(_userManager.Users.ToList()); public async Task<IActionResult> Edit(string userId)
         {
-            // Get user
+            // get user
             User user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                // Get users list
+                // get user roles list
                 var userRoles = await _userManager.GetRolesAsync(user);
                 var allRoles = _roleManager.Roles.ToList();
                 ChangeRoleViewModel model = new ChangeRoleViewModel
@@ -75,17 +75,17 @@ namespace CreativeIndustries.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
-            // Get user
+            // get user
             User user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                // Get user roles list
+                // get user roles list
                 var userRoles = await _userManager.GetRolesAsync(user);
-                // Get all roles
+                // get all roles
                 var allRoles = _roleManager.Roles.ToList();
-                // Get added roles list
+                // get added roles list
                 var addedRoles = roles.Except(userRoles);
-                // Get deleted roles
+                // get deleted roles
                 var removedRoles = userRoles.Except(roles);
 
                 await _userManager.AddToRolesAsync(user, addedRoles);
@@ -94,9 +94,7 @@ namespace CreativeIndustries.API.Controllers
 
                 return RedirectToAction("UserList");
             }
-
             return NotFound();
         }
-
     }
 }

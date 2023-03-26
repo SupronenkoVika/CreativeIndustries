@@ -117,12 +117,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Header" xml:space="preserve">
-    <value>Welcome</value>
-    <comment>Заголовок на главной</comment>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
   </data>
-  <data name="Message" xml:space="preserve">
-    <value>Creative industries - a sector of the economy associated with intellectual activity, developed mainly on ideas and technology</value>
-    <comment>Текст на главной странице</comment>
+  <data name="aboutProj" xml:space="preserve">
+    <value>Creative industries - a sector of the economy associated with intellectual activity,
+developing mainly on ideas and technologies (scientific research activities,
+design, television, music, fashion, architecture, software development and others)</value>
+  </data>
+  <data name="accessRights" xml:space="preserve">
+    <value>Access rights</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="addRole" xml:space="preserve">
+    <value>Add role</value>
+  </data>
+  <data name="appName" xml:space="preserve">
+    <value>Creative industries</value>
+  </data>
+  <data name="changeRole" xml:space="preserve">
+    <value>Change user role</value>
+  </data>
+  <data name="confirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="createNewAccount" xml:space="preserve">
+    <value>Сreate new account</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="mail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="newRole" xml:space="preserve">
+    <value>New role</value>
+  </data>
+  <data name="overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="recipientEmail" xml:space="preserve">
+    <value>Recipient email</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="rememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="sendEmail" xml:space="preserve">
+    <value>Send email</value>
+  </data>
+  <data name="sendToAll" xml:space="preserve">
+    <value>Send to all users</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="writeMessage" xml:space="preserve">
+    <value>Write your message</value>
   </data>
 </root>

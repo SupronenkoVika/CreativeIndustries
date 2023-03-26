@@ -1,4 +1,4 @@
-﻿namespace CreativeIndustries.DS.Contracts
+﻿namespace CreativeIndustries.API.DXS
 {
     public class MailDataViewModel
     {

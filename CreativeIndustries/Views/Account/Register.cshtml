@@ -1,34 +1,50 @@
-﻿@model CreativeIndustries.API.DXS.AccountViewModels.RegistrationViewModel
+﻿@using CreativeIndustries.Resources
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model CreativeIndustries.API.DXS.AccountViewModels.RegistrationViewModel
+@inject LocService SharedLocalizer
 
-<h2>New user registration</h2>
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("register");
+}
+<h2>@ViewData["Title"]</h2>
 <form method="post" asp-controller="Account" asp-action="Register">
     <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="FirstName"></label><br />
-        <input asp-for="FirstName" />
-        <span asp-validation-for="FirstName"></span>
+    <div class="form-group">
+        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("firstName")</label>
+        <div class="col-md-10">
+            <input asp-for="FirstName"/>
+            <span asp-validation-for="FirstName"></span>
+        </div>
     </div>
-    <div>
-        <label asp-for="Surname"></label><br />
-        <input asp-for="Surname" />
-        <span asp-validation-for="Surname"></span>
+    <div class="form-group">
+        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("lastName")</label>
+        <div class="col-md-10">
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </div>
     </div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
+    <div class="form-group">
+    <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("email")</label>
+        <div class="col-md-10">
+            <input asp-for="Email"/>
+            <span asp-validation-for="Email"></span>
+        </div>
+        </div>
+    <div class="form-group">
+    <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("password")</label>
+    <div class="col-md-10">
         <input asp-for="Password" />
         <span asp-validation-for="Password"></span>
     </div>
-    <div>
-        <label asp-for="ConfirmPassword"></label><br />
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("confirmPassword")</label>
+    <div class="col-md-10">
         <input asp-for="ConfirmPassword" />
         <span asp-validation-for="ConfirmPassword"></span>
     </div>
+    </div>
     <div>
-        <input type="submit" value="Registrartion" />
+        <input type="submit" value="Registration" />
     </div>
 </form>

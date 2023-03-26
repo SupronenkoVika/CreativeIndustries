@@ -1,9 +1,11 @@
-﻿using CreativeIndustries.DS.Contracts;
+﻿using CreativeIndustries.API.DXS;
+using CreativeIndustries.DS.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreativeIndustries.API.Controllers
 {
+    //[Authorize(Roles = "CompanyAdmin, Admin")]
     public class EmailController : Controller
     {
         private readonly IMailService _mail;
@@ -25,6 +27,20 @@ namespace CreativeIndustries.API.Controllers
         public IActionResult SendMail(MailDataViewModel emailData)
         {
             bool result = _mail.Send(emailData);
+            if (result)
+            {
+                return RedirectToAction("SentEmail");
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occured. The Mail could not be sent.");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SendEmailToAllUsers(MailDataViewModel emailData)
+        {
+            bool result = _mail.SendMailToAllUsers(emailData);
             if (result)
             {
                 return RedirectToAction("SentEmail");

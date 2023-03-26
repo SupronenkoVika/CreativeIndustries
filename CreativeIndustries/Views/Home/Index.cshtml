@@ -1,6 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using CreativeIndustries.Resources
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("welcome");
 }
+
+<div class="text-center">
+    <h1 class="display-4">@SharedLocalizer.GetLocalizedHtmlString("welcome")</h1>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("aboutProj")</p>
+</div>
+<hr />
 
 
 

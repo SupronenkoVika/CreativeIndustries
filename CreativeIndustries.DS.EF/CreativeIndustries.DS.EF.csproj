@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CreativeIndustries.API.DXS\CreativeIndustries.API.DXS.csproj" />
     <ProjectReference Include="..\CreativeIndustries.DS.Contracts\CreativeIndustries.DS.Contracts.csproj" />
     <ProjectReference Include="..\CreativeIndustries.DS.DB.EF\CreativeIndustries.DS.DB.EF.csproj" />
     <ProjectReference Include="..\CreativeIndustries.DS.Entities\CreativeIndustries.DS.Entities.csproj" />
