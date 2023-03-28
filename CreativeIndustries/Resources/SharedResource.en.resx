@@ -140,11 +140,20 @@ design, television, music, fashion, architecture, software development and other
   <data name="changeRole" xml:space="preserve">
     <value>Change user role</value>
   </data>
+  <data name="companyName" xml:space="preserve">
+    <value>Сompany name</value>
+  </data>
   <data name="confirmPassword" xml:space="preserve">
     <value>Confirm password</value>
   </data>
+  <data name="createCompany" xml:space="preserve">
+    <value>Create company</value>
+  </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Сreate new account</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>Email</value>

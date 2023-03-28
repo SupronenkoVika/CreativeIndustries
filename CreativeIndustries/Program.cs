@@ -48,15 +48,23 @@ services.Configure<RequestLocalizationOptions>(options =>
 
 
 services.AddTransient<IMailService, MailService>();
+services.AddTransient<ICompanyService, CompanyService>();
 
 services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
-var connectStr = builder.Configuration.GetConnectionString("DefaultConnection");
-//services.AddDbContext<CompanyDBContext>(opts => opts.UseSqlServer(connectStr));
-services.AddDbContext<AppUserDBContext>(opts => opts.UseSqlServer(connectStr));
+//var connectStr = builder.Configuration.GetConnectionString("DefaultConnection");
+services.AddDbContext<CompanyDBContext>(opts => opts.UseSqlServer());
+services.AddDbContext<AppUserDBContext>(opts => opts.UseSqlServer());
 
 
-services.AddIdentity<User, IdentityRole>()
+services.AddIdentity<User, IdentityRole>(opts =>
+    {
+        opts.Password.RequiredLength = 6;
+        opts.Password.RequireLowercase = true;
+        opts.Password.RequireUppercase = true;
+        opts.Password.RequireDigit = true;
+        opts.User.RequireUniqueEmail = true;
+    })
     .AddEntityFrameworkStores<AppUserDBContext>();
 
 services.AddControllers().AddApplicationPart(typeof(AccountController).Assembly);

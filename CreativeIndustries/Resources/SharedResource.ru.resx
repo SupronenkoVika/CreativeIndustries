@@ -140,11 +140,20 @@
   <data name="changeRole" xml:space="preserve">
     <value>Сменить роль пользователя</value>
   </data>
+  <data name="companyName" xml:space="preserve">
+    <value>Название</value>
+  </data>
   <data name="confirmPassword" xml:space="preserve">
     <value>Подтвердить пароль</value>
   </data>
+  <data name="createCompany" xml:space="preserve">
+    <value>Создать компанию</value>
+  </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Создать новый аккаунт</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Описание</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>Электронная почта</value>

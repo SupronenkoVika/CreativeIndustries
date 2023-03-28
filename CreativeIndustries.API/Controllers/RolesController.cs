@@ -50,7 +50,8 @@ namespace CreativeIndustries.API.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult UserList() => View(_userManager.Users.ToList()); public async Task<IActionResult> Edit(string userId)
+        public IActionResult UserList() => View(_userManager.Users.ToList());
+        public async Task<IActionResult> Edit(string userId)
         {
             // get user
             User user = await _userManager.FindByIdAsync(userId);

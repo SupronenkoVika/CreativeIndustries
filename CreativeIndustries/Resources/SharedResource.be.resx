@@ -140,11 +140,20 @@
   <data name="changeRole" xml:space="preserve">
     <value>Змяніць ролю карыстальніка</value>
   </data>
+  <data name="companyName" xml:space="preserve">
+    <value>Назва</value>
+  </data>
   <data name="confirmPassword" xml:space="preserve">
     <value>Пацвердзіце пароль</value>
   </data>
+  <data name="createCompany" xml:space="preserve">
+    <value>Стварыць кампанію</value>
+  </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Стварыць новы ўліковы запіс</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Апісанне</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>Электронная пошта</value>

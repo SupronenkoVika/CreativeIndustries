@@ -1,4 +1,4 @@
-﻿namespace CreativeIndustries.API.DXS.CompanyActionViewModels
+﻿namespace CreativeIndustries.API.DXS.CompanyViewModels
 {
     public class AddNewsViewModel
     {

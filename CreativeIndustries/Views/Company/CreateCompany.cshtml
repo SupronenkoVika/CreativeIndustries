@@ -1,0 +1,32 @@
+﻿@using CreativeIndustries.Resources
+@model CreativeIndustries.API.DXS.CompanyViewModels.CompanyViewModel
+
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("createCompany");
+}
+
+<h2>@ViewData["Title"]</h2>
+<form method="post" asp-controller="Company" asp-action="CreateCompany">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
+        <div class="col-md-10">
+            <input asp-for="CompanyName" />
+            <span asp-validation-for="CompanyName"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
+        <div class="col-md-10">
+            <input asp-for="Description" />
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+</form>
+<form asp-action = "CreateCompany" method = "post">
+    <div class="col-4">
+        <button type="submit" class="btn btn-outline-success">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</button>
+    </div>
+</form>

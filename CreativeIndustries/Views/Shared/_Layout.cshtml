@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Email" asp-action="SendEmail">@SharedLocalizer.GetLocalizedHtmlString("mail")</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Company" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</a>
+                        </li>
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>
