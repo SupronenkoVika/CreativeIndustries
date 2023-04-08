@@ -1,4 +1,5 @@
 using CreativeIndustries.API.Controllers;
+using CreativeIndustries.API.Mappings;
 using CreativeIndustries.DS.Contracts;
 using CreativeIndustries.DS.DB.EF;
 using CreativeIndustries.DS.EF;
@@ -52,9 +53,8 @@ services.AddTransient<ICompanyService, CompanyService>();
 
 services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
-//var connectStr = builder.Configuration.GetConnectionString("DefaultConnection");
-services.AddDbContext<CompanyDBContext>(opts => opts.UseSqlServer());
-services.AddDbContext<AppUserDBContext>(opts => opts.UseSqlServer());
+var connectStr = builder.Configuration.GetConnectionString("DefaultConnection");
+services.AddDbContext<AppDBContext>(opts => opts.UseSqlServer(connectStr));
 
 
 services.AddIdentity<User, IdentityRole>(opts =>
@@ -65,10 +65,11 @@ services.AddIdentity<User, IdentityRole>(opts =>
         opts.Password.RequireDigit = true;
         opts.User.RequireUniqueEmail = true;
     })
-    .AddEntityFrameworkStores<AppUserDBContext>();
+    .AddEntityFrameworkStores<AppDBContext>();
 
 services.AddControllers().AddApplicationPart(typeof(AccountController).Assembly);
 
+services.AddAutoMapper(typeof(CompanyProfile), typeof(NewsProfile), typeof(EventProfile));
 
 var app = builder.Build();
 

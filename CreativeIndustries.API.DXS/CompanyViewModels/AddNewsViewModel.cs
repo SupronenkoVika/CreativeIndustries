@@ -2,9 +2,11 @@
 {
     public class AddNewsViewModel
     {
-        public string Name { get; set; }
-        public DateTime AdditionDate { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string PublicationDate { get; set; }
         public string Description { get; set; }
+        public string Author { get; set; }
     }
 }
 

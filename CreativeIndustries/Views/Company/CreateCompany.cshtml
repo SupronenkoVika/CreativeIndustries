@@ -4,29 +4,37 @@
 @inject LocService SharedLocalizer
 
 @{
-    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("createCompany");
+    ViewBag.Title = @SharedLocalizer.GetLocalizedHtmlString("createCompany");
 }
 
-<h2>@ViewData["Title"]</h2>
-<form method="post" asp-controller="Company" asp-action="CreateCompany">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div class="form-group">
-        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
-        <div class="col-md-10">
-            <input asp-for="CompanyName" />
-            <span asp-validation-for="CompanyName"></span>
-        </div>
+<h3>@SharedLocalizer.GetLocalizedHtmlString("createCompany")</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateCompany">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
+            <div class="col-md-10">
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            </div>
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("createCompany") class="btn btn-primary" />
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
-        <div class="col-md-10">
-            <input asp-for="Description" />
-            <span asp-validation-for="Description"></span>
-        </div>
-    </div>
-</form>
-<form asp-action = "CreateCompany" method = "post">
-    <div class="col-4">
-        <button type="submit" class="btn btn-outline-success">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</button>
-    </div>
-</form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

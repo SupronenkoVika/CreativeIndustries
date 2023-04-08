@@ -1,39 +1,26 @@
 ﻿using CreativeIndustries.DS.Contracts;
 using CreativeIndustries.DS.DB.EF;
-using CreativeIndustries.DS.Entities;
 
 namespace CreativeIndustries.DS.EF
 {
     public class CompanyService : ICompanyService
     {
-        private readonly CompanyDBContext _db;
+        private readonly AppDBContext _db;
 
-        public CompanyService(CompanyDBContext db)
+        public CompanyService(AppDBContext db)
         {
             _db = db;
         }
 
-        public void CreateCompany(Company company)
+        public void Create<T>(T item)
         {
-            _db.Add(company);
+            _db.Add(item);
             _db.SaveChanges();
         }
 
-        public void CreateNews(CompanyNews news)
+        public void Delete<T>(T item)
         {
-            _db.Add(news);
-            _db.SaveChanges();
-        }
-
-        public void CreateEvent(CompanyEvent compEvent)
-        {
-            _db.Add(compEvent);
-            _db.SaveChanges();
-        }
-
-        public void DeleteCompany(Company company)
-        {
-            _db.Remove(company);
+            _db.Remove(item);
             _db.SaveChanges();
         }
     }

@@ -3,47 +3,46 @@
 @inject LocService SharedLocalizer
 
 @{
-    ViewBag.Title = @SharedLocalizer.GetLocalizedHtmlString("addNews");
+    ViewBag.Title = @SharedLocalizer.GetLocalizedHtmlString("editNews");
 }
 
-<p>
-    <a asp-action="CreateNews">@SharedLocalizer.GetLocalizedHtmlString("addNews")</a>
-</p>
+<h4>
+    @SharedLocalizer.GetLocalizedHtmlString("editNews")
+</h4>
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateNews">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="EditNews">
             <div class="form-group">
-                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("title")</label>
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("title")</label>
             <div class="col-md-10">
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             </div>
             <div class="form-group">
-                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
             <div class="col-md-10">
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             </div>
             <div class="form-group">
-            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("publicationDate")</label>
+                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("publicationDate")</label>
             <div class="col-md-10">
                 <input asp-for="PublicationDate" class="form-control" />
                 <span asp-validation-for="PublicationDate" class="text-danger"></span>
             </div>
             </div>
             <div class="form-group">
-                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("author")</label>
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("author")</label>
             <div class="col-md-10">
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
             </div>
             <div class="form-group">
-                <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("create") class="btn btn-primary" />
+                <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("edit") class="btn btn-primary" />
             </div>
         </form>
     </div>

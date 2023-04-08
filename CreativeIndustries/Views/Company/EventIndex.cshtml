@@ -1,0 +1,26 @@
+﻿@using CreativeIndustries.Resources
+@using CreativeIndustries.DS.Entities
+@model IEnumerable<CreativeIndustries.DS.Entities.CompanyEvent>
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("events");
+}
+
+<a asp-action="CreateEvent">@SharedLocalizer.GetLocalizedHtmlString("addEvent")</a>
+
+<table class="table">
+    <tr><th>@SharedLocalizer.GetLocalizedHtmlString("name")</th><th>@SharedLocalizer.GetLocalizedHtmlString("description")</th><th>@SharedLocalizer.GetLocalizedHtmlString("author")</th><th></th></tr>
+    @foreach (var compEvent in Model)
+    {
+        <tr>
+            <td>@compEvent.Name</td>
+            <td>@compEvent.Description</td>
+            <td>@compEvent.Author</td>
+            <td>
+                <a asp-action="EditEvent" asp-route-id="@compEvent.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <a asp-action="DeleteEvent" asp-route-id="@compEvent.Id">@SharedLocalizer.GetLocalizedHtmlString("delete")</a>
+            </td>
+        </tr>
+    }
+</table>

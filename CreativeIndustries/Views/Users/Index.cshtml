@@ -1,25 +1,25 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using CreativeIndustries.Resources
 @model IEnumerable<CreativeIndustries.DS.Entities.User>
+@inject LocService SharedLocalizer
+
 @{
-    ViewBag.Title = "Users list";
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("users");
 }
 
-<a asp-action="Create">Add User</a>
+<a asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("addUser")</a>
 
 <table class="table">
-    <tr><th>Email</th><th>Год</th><th></th></tr>
+    <tr><th>@SharedLocalizer.GetLocalizedHtmlString("email")</th><th>@SharedLocalizer.GetLocalizedHtmlString("personName")</th><th></th></tr>
     @foreach (var user in Model)
     {
         <tr>
             <td>@user.Email</td>
+            <td>@user.UserName</td>
             <td>
-                <form asp-action="Delete" asp-route-id="@user.Id" method="post">
-                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
-                    <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Change Password</a>
-                    <button type="submit" class="btn btn-sm btn-danger">
-                        Delete
-                    </button>
-                </form>
+                <a asp-action="Edit" asp-route-id="@user.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <a asp-action="Delete" asp-route-id="@user.Id">@SharedLocalizer.GetLocalizedHtmlString("delete")</a>
+                <a asp-action="ChangePassword" asp-route-id="@user.Id">@SharedLocalizer.GetLocalizedHtmlString("changePassword")</a>
             </td>
         </tr>
     }

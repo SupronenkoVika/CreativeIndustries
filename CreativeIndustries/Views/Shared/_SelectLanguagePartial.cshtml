@@ -8,6 +8,7 @@
 @inject IOptions<RequestLocalizationOptions> LocOptions
 @using CreativeIndustries.Resources
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Globalization
 @inject LocService SharedLocalizer
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
@@ -19,10 +20,10 @@
 <div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
     <form class="btn btn-secondary btn-sm @*dropdown-toggle*@" id="selectLanguage" asp-controller="SelectLanguage" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post" class="form-horizontal" role="form">
         <div class="input-group">
-        <select class="custom-select" name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems"></select>
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-outline-secondary">@SharedLocalizer.GetLocalizedHtmlString("SAVE")</button>
-            </div>
+            <select class="custom-select" name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems"></select>
+        </div>
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-secondary">@SharedLocalizer.GetLocalizedHtmlString("Save")</button>
         </div>
     </form>
 </div>

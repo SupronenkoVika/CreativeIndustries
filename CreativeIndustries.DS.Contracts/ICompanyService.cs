@@ -1,12 +1,8 @@
-﻿using CreativeIndustries.DS.Entities;
-
-namespace CreativeIndustries.DS.Contracts
+﻿namespace CreativeIndustries.DS.Contracts
 {
     public interface ICompanyService
     {
-        public void CreateCompany(Company company);
-        public void CreateNews(CompanyNews news);
-        public void CreateEvent(CompanyEvent compEvent);
-        public void DeleteCompany(Company company);
+        public void Create<T>(T item);
+        public void Delete<T>(T item);
     }
 }

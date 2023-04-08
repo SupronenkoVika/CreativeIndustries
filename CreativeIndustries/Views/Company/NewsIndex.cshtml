@@ -1,0 +1,27 @@
+﻿@using CreativeIndustries.Resources
+@using CreativeIndustries.DS.Entities
+@model IEnumerable<CreativeIndustries.DS.Entities.CompanyNews>
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("news");
+}
+
+<a asp-action="CreateNews">@SharedLocalizer.GetLocalizedHtmlString("addNews")</a>
+
+<table class="table">
+    <tr><th>Name</th><th>Description</th><th>Publication date</th><th>Author</th><th></th></tr>
+    @foreach (var news in Model)
+    {
+        <tr>
+            <td>@news.Title</td>
+            <td>@news.Description</td>
+            <td>@news.PublicationDate</td>
+            <td>@news.Author</td>
+            <td>
+                <a asp-action="EditNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <a asp-action="DeleteNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("delete")</a>
+            </td>
+        </tr>
+    }
+</table>

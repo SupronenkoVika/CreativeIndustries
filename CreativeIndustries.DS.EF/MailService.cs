@@ -12,9 +12,9 @@ namespace CreativeIndustries.DS.EF
     public class MailService : IMailService
     {
         private readonly MailSettings _settings;
-        private readonly AppUserDBContext _db;
+        private readonly AppDBContext _db;
 
-        public MailService(IOptions<MailSettings> settings, AppUserDBContext context)
+        public MailService(IOptions<MailSettings> settings, AppDBContext context)
         {
             _settings = settings.Value;
             _db = context;

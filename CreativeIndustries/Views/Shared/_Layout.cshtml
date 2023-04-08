@@ -30,18 +30,33 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-controller="Home" asp-action="About">@SharedLocalizer.GetLocalizedHtmlString("about")</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Users" asp-action="Index">User List(just for test)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Roles" asp-action="Index">User List Roles(just for test)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Email" asp-action="SendEmail">@SharedLocalizer.GetLocalizedHtmlString("mail")</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Company" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</a>
-                        </li>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        @SharedLocalizer.GetLocalizedHtmlString("admin")
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" asp-controller="Users" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("users")</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Roles" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("roles")</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Company" asp-action="CreateCompany">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</a></li>
+                                    </ul>
+                                </li>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            @SharedLocalizer.GetLocalizedHtmlString("partners")
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item" asp-controller="Email" asp-action="SendEmail">@SharedLocalizer.GetLocalizedHtmlString("mail")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="NewsIndex">@SharedLocalizer.GetLocalizedHtmlString("createNews")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="EventIndex">@SharedLocalizer.GetLocalizedHtmlString("createEvent")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="CompanyIndex">@SharedLocalizer.GetLocalizedHtmlString("companies")</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>

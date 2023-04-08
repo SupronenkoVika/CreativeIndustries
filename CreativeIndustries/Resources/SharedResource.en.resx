@@ -131,14 +131,35 @@ design, television, music, fashion, architecture, software development and other
   <data name="add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="addEvent" xml:space="preserve">
+    <value>Add event</value>
+  </data>
+  <data name="addNews" xml:space="preserve">
+    <value>Add news</value>
+  </data>
   <data name="addRole" xml:space="preserve">
     <value>Add role</value>
+  </data>
+  <data name="addUser" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="admin" xml:space="preserve">
+    <value>Admin</value>
   </data>
   <data name="appName" xml:space="preserve">
     <value>Creative industries</value>
   </data>
+  <data name="author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="changePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
   <data name="changeRole" xml:space="preserve">
     <value>Change user role</value>
+  </data>
+  <data name="companies" xml:space="preserve">
+    <value>Companies</value>
   </data>
   <data name="companyName" xml:space="preserve">
     <value>Сompany name</value>
@@ -146,17 +167,35 @@ design, television, music, fashion, architecture, software development and other
   <data name="confirmPassword" xml:space="preserve">
     <value>Confirm password</value>
   </data>
+  <data name="create" xml:space="preserve">
+    <value>Create</value>
+  </data>
   <data name="createCompany" xml:space="preserve">
     <value>Create company</value>
   </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Сreate new account</value>
   </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="description" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="editEvent" xml:space="preserve">
+    <value>Edit event</value>
+  </data>
+  <data name="editNews" xml:space="preserve">
+    <value>Edit news</value>
+  </data>
   <data name="email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="events" xml:space="preserve">
+    <value>Events</value>
   </data>
   <data name="firstName" xml:space="preserve">
     <value>Name</value>
@@ -173,17 +212,32 @@ design, television, music, fashion, architecture, software development and other
   <data name="mail" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="name" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="newRole" xml:space="preserve">
     <value>New role</value>
+  </data>
+  <data name="news" xml:space="preserve">
+    <value>News</value>
   </data>
   <data name="overview" xml:space="preserve">
     <value>Overview</value>
   </data>
+  <data name="partners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
   <data name="password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="personName" xml:space="preserve">
+    <value>Person name</value>
+  </data>
   <data name="privacy" xml:space="preserve">
     <value>Privacy</value>
+  </data>
+  <data name="publicationDate" xml:space="preserve">
+    <value>Publication date</value>
   </data>
   <data name="recipientEmail" xml:space="preserve">
     <value>Recipient email</value>
@@ -193,6 +247,9 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="rememberMe" xml:space="preserve">
     <value>Remember me</value>
+  </data>
+  <data name="roles" xml:space="preserve">
+    <value>Roles</value>
   </data>
   <data name="save" xml:space="preserve">
     <value>Save</value>
@@ -205,6 +262,12 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="subject" xml:space="preserve">
     <value>Subject</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>Users</value>
   </data>
   <data name="welcome" xml:space="preserve">
     <value>Welcome</value>
