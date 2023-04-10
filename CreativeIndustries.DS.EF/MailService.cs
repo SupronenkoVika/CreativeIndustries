@@ -46,6 +46,7 @@ namespace CreativeIndustries.DS.EF
             {
                 email.To.Add(MailboxAddress.Parse(user.Email));
             }
+
             email.Subject = mailData.Subject;
             email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = mailData.Body };
 

@@ -1,18 +1,25 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using CreativeIndustries.Resources
 @model CreativeIndustries.API.DXS.EditUserViewModel
+@inject LocService SharedLocalizer
+
 @{
-    ViewBag.Title = "Edit user";
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("editUser");
 }
+
 <form asp-action="Edit" asp-controller="Users">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <input type="hidden" asp-for="Id" />
     </div>
     <div class="form-group">
+    <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("email")</label>
+    <div class="col-md-10">
         <label asp-for="Email" class="control-label">Email</label>
         <input type="text" asp-for="Email" class="form-control" />
     </div>
+    </div>
     <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-outline-secondary" />
+        <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("save") class="btn btn-outline-secondary" />
     </div>
 </form>

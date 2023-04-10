@@ -3,6 +3,10 @@
 @model CreativeIndustries.API.DXS.ChangeRoleViewModel
 @inject LocService SharedLocalizer
 
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("changeRole");
+}
+
 <h2>@SharedLocalizer.GetLocalizedHtmlString("changeRole") @Model.UserEmail</h2>
 
 <form asp-action="Edit" method="post">

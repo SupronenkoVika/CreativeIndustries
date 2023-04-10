@@ -185,11 +185,17 @@ design, television, music, fashion, architecture, software development and other
   <data name="edit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="editCompany" xml:space="preserve">
+    <value>Edit company</value>
+  </data>
   <data name="editEvent" xml:space="preserve">
     <value>Edit event</value>
   </data>
   <data name="editNews" xml:space="preserve">
     <value>Edit news</value>
+  </data>
+  <data name="editUser" xml:space="preserve">
+    <value>Edit user</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>Email</value>
@@ -209,17 +215,20 @@ design, television, music, fashion, architecture, software development and other
   <data name="logout" xml:space="preserve">
     <value>Logout</value>
   </data>
-  <data name="mail" xml:space="preserve">
-    <value>Email</value>
-  </data>
   <data name="name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>New password</value>
   </data>
   <data name="newRole" xml:space="preserve">
     <value>New role</value>
   </data>
   <data name="news" xml:space="preserve">
     <value>News</value>
+  </data>
+  <data name="oldPassword" xml:space="preserve">
+    <value>Old password</value>
   </data>
   <data name="overview" xml:space="preserve">
     <value>Overview</value>
@@ -251,6 +260,9 @@ design, television, music, fashion, architecture, software development and other
   <data name="roles" xml:space="preserve">
     <value>Roles</value>
   </data>
+  <data name="rolesList" xml:space="preserve">
+    <value>Roles list</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -268,6 +280,9 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="users" xml:space="preserve">
     <value>Users</value>
+  </data>
+  <data name="usersList" xml:space="preserve">
+    <value>Users list</value>
   </data>
   <data name="welcome" xml:space="preserve">
     <value>Welcome</value>

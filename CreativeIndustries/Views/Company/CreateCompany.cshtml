@@ -14,16 +14,18 @@
         <form asp-action="CreateCompany">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
-            <div class="col-md-10">
-                <input asp-for="CompanyName" class="form-control" />
-                <span asp-validation-for="CompanyName" class="text-danger"></span>
+                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
+                <div class="col-md-10">
+                    <input asp-for="CompanyName" class="form-control" />
+                    <span asp-validation-for="CompanyName" class="text-danger"></span>
+                </div>
             </div>
-            </div>
+            <div class="form-group">
             <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
             <div class="col-md-10">
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
             </div>
             <div class="form-group">
                 <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("createCompany") class="btn btn-primary" />

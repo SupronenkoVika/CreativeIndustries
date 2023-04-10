@@ -1,7 +1,9 @@
-﻿@model CreativeIndustries.API.DXS.CompanyViewModels.CompanyViewModel
+﻿@using CreativeIndustries.Resources
+@model CreativeIndustries.API.DXS.CompanyViewModels.CompanyViewModel
+@inject LocService SharedLocalizer
 
 @{
-    ViewData["Title"] = "Edit company";
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("editCompany");
 }
 
 <h4>
@@ -12,17 +14,21 @@
     <div class="col-md-4">
         <form asp-action="EditCompany">
             <div class="form-group">
-                <label asp-for="CompanyName" class="control-label"></label>
+                <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("companyName")</label>
+            <div class="col-md-10">
                 <input asp-for="CompanyName" class="form-control" />
                 <span asp-validation-for="CompanyName" class="text-danger"></span>
             </div>
+            </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+            <label class="col-md-2 control-label">@SharedLocalizer.GetLocalizedHtmlString("description")</label>
+            <div class="col-md-10">
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+            </div>
             <div class="form-group">
-                <input type="submit" value="Edit" class="btn btn-primary" />
+                <input type="submit" value=@SharedLocalizer.GetLocalizedHtmlString("editCompany") class="btn btn-primary" />
             </div>
         </form>
     </div>

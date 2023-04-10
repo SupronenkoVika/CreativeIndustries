@@ -191,14 +191,23 @@
   <data name="edit" xml:space="preserve">
     <value>Рэдагаваць</value>
   </data>
+  <data name="editCompany" xml:space="preserve">
+    <value>Рэдагаваць кампанiю</value>
+  </data>
   <data name="editEvent" xml:space="preserve">
     <value>Рэдагаваць падзею</value>
   </data>
   <data name="editNews" xml:space="preserve">
     <value>Рэдагаваць навіны</value>
   </data>
+  <data name="editUser" xml:space="preserve">
+    <value>Змяніць карыстальніка</value>
+  </data>
   <data name="email" xml:space="preserve">
     <value>Электронная пошта</value>
+  </data>
+  <data name="events" xml:space="preserve">
+    <value>Падзеi</value>
   </data>
   <data name="firstName" xml:space="preserve">
     <value>Імя</value>
@@ -212,14 +221,20 @@
   <data name="logout" xml:space="preserve">
     <value>Выхад</value>
   </data>
-  <data name="mail" xml:space="preserve">
-    <value>Пошта</value>
-  </data>
   <data name="name" xml:space="preserve">
     <value>Назва</value>
   </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>Новы пароль</value>
+  </data>
   <data name="newRole" xml:space="preserve">
     <value>Новая роля</value>
+  </data>
+  <data name="news" xml:space="preserve">
+    <value>Навiны</value>
+  </data>
+  <data name="oldPassword" xml:space="preserve">
+    <value>Стары пароль</value>
   </data>
   <data name="overview" xml:space="preserve">
     <value>Агляд</value>
@@ -251,6 +266,9 @@
   <data name="roles" xml:space="preserve">
     <value>Ролі</value>
   </data>
+  <data name="rolesList" xml:space="preserve">
+    <value>Спіс роляў</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Захаваць</value>
   </data>
@@ -268,6 +286,9 @@
   </data>
   <data name="users" xml:space="preserve">
     <value>Карыстальнікі</value>
+  </data>
+  <data name="usersList" xml:space="preserve">
+    <value>Спіс карыстальнікаў</value>
   </data>
   <data name="welcome" xml:space="preserve">
     <value>Вітаем</value>

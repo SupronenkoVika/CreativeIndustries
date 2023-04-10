@@ -3,6 +3,9 @@
 @model CreativeIndustries.API.DXS.MailDataViewModel
 @inject LocService SharedLocalizer
 
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("email");
+}
 
 <h4 class="text-info mt-4">@SharedLocalizer.GetLocalizedHtmlString("sendEmail")</h4>
 <hr class="text-info" />

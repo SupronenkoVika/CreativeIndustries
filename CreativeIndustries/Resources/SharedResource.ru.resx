@@ -191,14 +191,23 @@
   <data name="edit" xml:space="preserve">
     <value>Изменить</value>
   </data>
+  <data name="editCompany" xml:space="preserve">
+    <value>Изменить компанию</value>
+  </data>
   <data name="editEvent" xml:space="preserve">
     <value>Изменить событие</value>
   </data>
   <data name="editNews" xml:space="preserve">
     <value>Изменить новость</value>
   </data>
+  <data name="editUser" xml:space="preserve">
+    <value>Изменить пользователя</value>
+  </data>
   <data name="email" xml:space="preserve">
     <value>Электронная почта</value>
+  </data>
+  <data name="events" xml:space="preserve">
+    <value>События</value>
   </data>
   <data name="firstName" xml:space="preserve">
     <value>Имя</value>
@@ -212,14 +221,20 @@
   <data name="logout" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="mail" xml:space="preserve">
-    <value>Почта</value>
-  </data>
   <data name="name" xml:space="preserve">
     <value>Название</value>
   </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>Новый пароль</value>
+  </data>
   <data name="newRole" xml:space="preserve">
     <value>Новая роль</value>
+  </data>
+  <data name="news" xml:space="preserve">
+    <value>Новости</value>
+  </data>
+  <data name="oldPassword" xml:space="preserve">
+    <value>Старый пароль</value>
   </data>
   <data name="overview" xml:space="preserve">
     <value>Обзор</value>
@@ -251,6 +266,9 @@
   <data name="roles" xml:space="preserve">
     <value>Ролі</value>
   </data>
+  <data name="rolesList" xml:space="preserve">
+    <value>Список ролей</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Сохранить</value>
   </data>
@@ -268,6 +286,9 @@
   </data>
   <data name="users" xml:space="preserve">
     <value>Пользователи</value>
+  </data>
+  <data name="usersList" xml:space="preserve">
+    <value>Список пользователей</value>
   </data>
   <data name="welcome" xml:space="preserve">
     <value>Добро пожалоавать</value>

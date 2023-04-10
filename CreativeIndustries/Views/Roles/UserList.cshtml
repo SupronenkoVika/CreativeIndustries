@@ -2,7 +2,11 @@
 @model IEnumerable<CreativeIndustries.DS.Entities.User>
 @inject LocService SharedLocalizer
 
-<h2>Users list</h2>
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("usersList");
+}
+
+<h2>@SharedLocalizer.GetLocalizedHtmlString("usersList")</h2>
 <table class="table">
     @foreach (var user in Model)
     {

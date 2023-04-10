@@ -1,5 +1,6 @@
 ﻿using CreativeIndustries.DS.Contracts;
 using CreativeIndustries.DS.DB.EF;
+using Microsoft.EntityFrameworkCore;
 
 namespace CreativeIndustries.DS.EF
 {
@@ -23,5 +24,13 @@ namespace CreativeIndustries.DS.EF
             _db.Remove(item);
             _db.SaveChanges();
         }
+
+        public void Update<T>(T item)
+        {
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
     }
 }
+
+

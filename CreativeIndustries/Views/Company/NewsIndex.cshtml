@@ -10,7 +10,11 @@
 <a asp-action="CreateNews">@SharedLocalizer.GetLocalizedHtmlString("addNews")</a>
 
 <table class="table">
-    <tr><th>Name</th><th>Description</th><th>Publication date</th><th>Author</th><th></th></tr>
+    <tr><th>@SharedLocalizer.GetLocalizedHtmlString("name")</th><th>@SharedLocalizer.GetLocalizedHtmlString("description")</th>
+        <th>@SharedLocalizer.GetLocalizedHtmlString("publicationDate")</th>
+        <th>@SharedLocalizer.GetLocalizedHtmlString("author")</th>
+        <th></th>
+    </tr>
     @foreach (var news in Model)
     {
         <tr>

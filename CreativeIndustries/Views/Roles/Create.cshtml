@@ -3,6 +3,10 @@
 
 @inject LocService SharedLocalizer
 
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("newRole");
+}
+
 <div asp-validation-summary="All" class="text-danger"></div>
 
 <form asp-action="Create" method="post">

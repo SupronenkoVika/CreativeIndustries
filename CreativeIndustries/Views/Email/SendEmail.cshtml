@@ -3,7 +3,11 @@
 
 @inject LocService SharedLocalizer
 
-<h4 class="text-success mt-4">@SharedLocalizer.GetLocalizedHtmlString("mail")</h4>
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("email");
+}
+
+<h4 class="text-success mt-4">@SharedLocalizer.GetLocalizedHtmlString("email")</h4>
 <hr class="text-success" />
 <div class="d-flex justify-content-center">
     <div class="alert alert-info alert-dismissible fade show text-secondary indexText col-6" role="alert">
