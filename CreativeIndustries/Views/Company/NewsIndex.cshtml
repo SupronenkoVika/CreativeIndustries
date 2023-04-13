@@ -22,10 +22,16 @@
             <td>@news.Description</td>
             <td>@news.PublicationDate</td>
             <td>@news.Author</td>
-            <td>
-                <a asp-action="EditNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
-                <a asp-action="DeleteNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("delete")</a>
-            </td>
+                <td>
+                    <a asp-action="EditNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                </td>
+                <td>
+                    <form asp-action="DeleteNews" asp-route-id="@news.Id" method="post">
+                        <button type="submit" class="btn btn-sm btn-light">
+                            @SharedLocalizer.GetLocalizedHtmlString("delete")
+                        </button>
+                    </form>
+                </td>
         </tr>
     }
 </table>

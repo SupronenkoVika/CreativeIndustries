@@ -11,7 +11,6 @@ namespace CreativeIndustries.API.Controllers
     public class CompanyController : Controller
     {
         private readonly ICompanyService _companyService;
-        private readonly AppDBContext _db;
         private readonly IMapper _mapper;
 
         public CompanyController(ICompanyService companyService,
@@ -19,13 +18,26 @@ namespace CreativeIndustries.API.Controllers
             IMapper mapper)
         {
             _companyService = companyService;
-            _db = db;
             _mapper = mapper;
         }
 
-        public IActionResult CompanyIndex() => View(_db.Companies.ToList());
-        public IActionResult NewsIndex() => View(_db.News.ToList());
-        public IActionResult EventIndex() => View(_db.Events.ToList());
+        public IActionResult CompanyIndex()
+        {
+            var model = _companyService.GetList<Company>();
+            return View(model);
+        }
+
+        public IActionResult NewsIndex()
+        {
+            var model = _companyService.GetList<CompanyNews>();
+            return View(model);
+        }
+
+        public IActionResult EventIndex()
+        {
+            var model = _companyService.GetList<CompanyEvent>();
+            return View(model);
+        }
 
         [HttpGet]
         public IActionResult CreateCompany()
@@ -54,7 +66,7 @@ namespace CreativeIndustries.API.Controllers
                 _companyService.Create(comp);
                 return RedirectToAction("CompanyIndex", "Company");
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return View("Error");
             }
@@ -137,9 +149,9 @@ namespace CreativeIndustries.API.Controllers
         {
             try
             {
-                Company comp = _db.Companies.Find(id);
-                CompanyViewModel model = _mapper.Map<CompanyViewModel>(comp);
-                return View(model);
+                Company model = _companyService.FindCompById(id);
+                var comp = _mapper.Map<CompanyViewModel>(model);
+                return View(comp);
             }
             catch (Exception)
             {
@@ -171,9 +183,9 @@ namespace CreativeIndustries.API.Controllers
         {
             try
             {
-                CompanyNews news = _db.News.Find(id);
-                AddNewsViewModel model = _mapper.Map<AddNewsViewModel>(news);
-                return View(model);
+                CompanyNews model = _companyService.FindNewsById(id);
+                var news = _mapper.Map<AddNewsViewModel>(model);
+                return View(news);
             }
             catch (Exception)
             {
@@ -205,9 +217,9 @@ namespace CreativeIndustries.API.Controllers
         {
             try
             {
-                CompanyEvent compEvent = _db.Events.Find(id);
-                AddEventViewModel model = _mapper.Map<AddEventViewModel>(compEvent);
-                return View(model);
+                CompanyEvent model = _companyService.FindEventById(id);
+                var compEvent = _mapper.Map<AddEventViewModel>(model);
+                return View(compEvent);
             }
             catch (Exception)
             {
