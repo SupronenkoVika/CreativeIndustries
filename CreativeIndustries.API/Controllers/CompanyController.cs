@@ -3,11 +3,11 @@ using CreativeIndustries.API.DXS.CompanyViewModels;
 using CreativeIndustries.DS.Contracts;
 using CreativeIndustries.DS.DB.EF;
 using CreativeIndustries.DS.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreativeIndustries.API.Controllers
 {
-    //[Authorize(Roles = "CompanyAdmin")]
     public class CompanyController : Controller
     {
         private readonly ICompanyService _companyService;
@@ -57,6 +57,7 @@ namespace CreativeIndustries.API.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateCompany(CompanyViewModel company)
         {
@@ -72,6 +73,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult CreateNews(AddNewsViewModel news)
         {
@@ -87,6 +89,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult CreateEvent(AddEventViewModel compEvent)
         {
@@ -102,6 +105,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult DeleteCompany(Company company)
         {
@@ -116,6 +120,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult DeleteNews(CompanyNews news)
         {
@@ -130,6 +135,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult DeleteEvent(CompanyEvent compEvent)
         {
@@ -159,6 +165,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager, Admin")]
         [HttpPost]
         public IActionResult EditCompany(CompanyViewModel model)
         {
@@ -193,6 +200,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult EditNews(AddNewsViewModel model)
         {
@@ -227,6 +235,7 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public IActionResult EditEvent(AddEventViewModel model)
         {

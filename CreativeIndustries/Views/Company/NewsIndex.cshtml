@@ -7,7 +7,7 @@
     ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("news");
 }
 
-<a asp-action="CreateNews">@SharedLocalizer.GetLocalizedHtmlString("addNews")</a>
+<h4>@SharedLocalizer.GetLocalizedHtmlString("news")</h4>
 
 <table class="table">
     <tr><th>@SharedLocalizer.GetLocalizedHtmlString("name")</th><th>@SharedLocalizer.GetLocalizedHtmlString("description")</th>
@@ -23,7 +23,11 @@
             <td>@news.PublicationDate</td>
             <td>@news.Author</td>
                 <td>
-                    <a asp-action="EditNews" asp-route-id="@news.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <form asp-action="EditNews" asp-route-id="@news.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-light">
+                        @SharedLocalizer.GetLocalizedHtmlString("edit")
+                    </button>
+                </form>
                 </td>
                 <td>
                     <form asp-action="DeleteNews" asp-route-id="@news.Id" method="post">

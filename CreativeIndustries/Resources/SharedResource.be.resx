@@ -120,6 +120,11 @@
   <data name="about" xml:space="preserve">
     <value>Пра нас</value>
   </data>
+  <data name="aboutDescr" xml:space="preserve">
+    <value>На гэтай старонцы вы можаце пазнаёміцца з навінамі і падзеямі нашых партнёраў.
+      Абярыце ніжэй, што вы хочаце даведацца.
+      Дзякуй за Ваш інтарэс!)</value>
+  </data>
   <data name="aboutProj" xml:space="preserve">
     <value>Крэатыўныя індустрыі - сектар эканомікі, звязаны з інтэлектуальнай дзейнасцю,
 які развіваецца пераважна на ідэях і тэхналогіях(навукова-даследчая дзейнасць,
@@ -130,6 +135,9 @@
   </data>
   <data name="add" xml:space="preserve">
     <value>Дадаць</value>
+  </data>
+  <data name="addCompany" xml:space="preserve">
+    <value>Дадаць кампанiю</value>
   </data>
   <data name="addEvent" xml:space="preserve">
     <value>Дадаць падзею</value>
@@ -170,17 +178,8 @@
   <data name="create" xml:space="preserve">
     <value>Стварыць</value>
   </data>
-  <data name="createCompany" xml:space="preserve">
-    <value>Стварыць кампанiю</value>
-  </data>
-  <data name="createEvent" xml:space="preserve">
-    <value>Падзеі</value>
-  </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Стварыць новы ўліковы запіс</value>
-  </data>
-  <data name="createNews" xml:space="preserve">
-    <value>Навіны</value>
   </data>
   <data name="delete" xml:space="preserve">
     <value>Выдаліць</value>

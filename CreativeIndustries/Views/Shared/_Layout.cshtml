@@ -39,7 +39,7 @@
                                     <ul class="dropdown-menu dropdown-menu-dark">
                                         <li><a class="dropdown-item" asp-controller="Users" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("users")</a></li>
                                         <li><a class="dropdown-item" asp-controller="Roles" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("roles")</a></li>
-                                        <li><a class="dropdown-item" asp-controller="Company" asp-action="CreateCompany">@SharedLocalizer.GetLocalizedHtmlString("createCompany")</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Company" asp-action="CreateCompany">@SharedLocalizer.GetLocalizedHtmlString("addCompany")</a></li>
                                     </ul>
                                 </li>
                                 <ul class="navbar-nav">
@@ -49,8 +49,8 @@
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-dark">
                                             <li><a class="dropdown-item" asp-controller="Email" asp-action="SendEmail">@SharedLocalizer.GetLocalizedHtmlString("email")</a></li>
-                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="NewsIndex">@SharedLocalizer.GetLocalizedHtmlString("news")</a></li>
-                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="EventIndex">@SharedLocalizer.GetLocalizedHtmlString("events")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="CreateNews">@SharedLocalizer.GetLocalizedHtmlString("addNews")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Company" asp-action="CreateEvent">@SharedLocalizer.GetLocalizedHtmlString("addEvent")</a></li>
                                             <li><a class="dropdown-item" asp-controller="Company" asp-action="CompanyIndex">@SharedLocalizer.GetLocalizedHtmlString("companies")</a></li>
                                         </ul>
                                     </li>

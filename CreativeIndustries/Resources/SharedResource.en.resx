@@ -120,6 +120,11 @@
   <data name="about" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="aboutDescr" xml:space="preserve">
+    <value>On this page you can see news and events of our partners.
+    Choose below what you want.
+    Thank you for your interest!)</value>
+  </data>
   <data name="aboutProj" xml:space="preserve">
     <value>Creative industries - a sector of the economy associated with intellectual activity,
 developing mainly on ideas and technologies (scientific research activities,
@@ -130,6 +135,9 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="add" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="addCompany" xml:space="preserve">
+    <value>Add company</value>
   </data>
   <data name="addEvent" xml:space="preserve">
     <value>Add event</value>
@@ -169,9 +177,6 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="create" xml:space="preserve">
     <value>Create</value>
-  </data>
-  <data name="createCompany" xml:space="preserve">
-    <value>Create company</value>
   </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Сreate new account</value>

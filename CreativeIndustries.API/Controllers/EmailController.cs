@@ -1,11 +1,12 @@
 ﻿using CreativeIndustries.API.DXS;
 using CreativeIndustries.DS.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreativeIndustries.API.Controllers
 {
-    //[Authorize(Roles = "CompanyAdmin, Admin")]
+    [Authorize(Roles = "Admin, Manager")]
     public class EmailController : Controller
     {
         private readonly IMailService _mail;

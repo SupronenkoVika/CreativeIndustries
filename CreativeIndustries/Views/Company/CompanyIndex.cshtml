@@ -7,6 +7,8 @@
     ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("companies");
 }
 
+<h4>@SharedLocalizer.GetLocalizedHtmlString("companies")</h4>
+
 <table class="table">
     <tr><th>@SharedLocalizer.GetLocalizedHtmlString("companyName")</th><th>@SharedLocalizer.GetLocalizedHtmlString("description")</th><th></th></tr>
     @foreach (var company in Model)
@@ -15,7 +17,11 @@
             <td>@company.CompanyName</td>
             <td>@company.Description</td>
             <td>
-                <a asp-action="EditCompany" asp-route-id="@company.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <form asp-action="EditCompany" asp-route-id="@company.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-light">
+                        @SharedLocalizer.GetLocalizedHtmlString("edit")
+                    </button>
+                </form>
             </td>
             <td>
                 <form asp-action="DeleteCompany" asp-route-id="@company.Id" method="post">

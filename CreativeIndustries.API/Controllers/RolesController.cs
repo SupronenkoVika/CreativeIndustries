@@ -1,10 +1,12 @@
 ﻿using CreativeIndustries.API.DXS;
 using CreativeIndustries.DS.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreativeIndustries.API.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;

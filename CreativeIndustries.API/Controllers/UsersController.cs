@@ -1,11 +1,13 @@
 ﻿using CreativeIndustries.API.DXS;
 using CreativeIndustries.API.DXS.AccountViewModels;
 using CreativeIndustries.DS.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreativeIndustries.API.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private UserManager<User> _userManager;

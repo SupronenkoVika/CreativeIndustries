@@ -13,10 +13,27 @@
         <tr>
             <td>@role.Name</td>
             <td>
-                <a asp-action="Delete" asp-route-id="@role.Id">@SharedLocalizer.GetLocalizedHtmlString("delete")</a>
+                <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-light">
+                        @SharedLocalizer.GetLocalizedHtmlString("delete")
+                    </button>
+                </form>
             </td>
         </tr>
     }
 </table>
-<a asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("addRole")</a>
-<a asp-action="UserList">@SharedLocalizer.GetLocalizedHtmlString("usersList")</a>
+<table class="table">
+    <td>
+        <form asp-action="Create">
+            <button type="submit" class="btn btn-sm btn-light">
+                @SharedLocalizer.GetLocalizedHtmlString("addRole")
+            </button>
+        </form>
+
+        <form asp-action="UserList">
+            <button type="submit" class="btn btn-sm btn-light">
+                @SharedLocalizer.GetLocalizedHtmlString("usersList")
+            </button>
+        </form>
+    </td>
+</table>

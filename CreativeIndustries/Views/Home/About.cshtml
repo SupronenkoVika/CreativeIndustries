@@ -1,6 +1,22 @@
-﻿@{
-    ViewData["Title"] = "About";
+﻿@using CreativeIndustries.Resources
+@using CreativeIndustries.DS.Entities
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("about");
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+
+<p>
+    @SharedLocalizer.GetLocalizedHtmlString("aboutDescr")
+</p>
+
+<div class="list-group">
+    <a asp-controller="Company" asp-action="NewsIndex" class="list-group-item list-group-item-action">@SharedLocalizer.GetLocalizedHtmlString("news")</a>
+    <a asp-controller="Company" asp-action="EventIndex" class="list-group-item list-group-item-action">@SharedLocalizer.GetLocalizedHtmlString("events")</a>
+    <a asp-controller="Company" asp-action="CompanyIndex" class="list-group-item list-group-item-action">@SharedLocalizer.GetLocalizedHtmlString("partners")</a>
+</div>
+
+
+
+
 

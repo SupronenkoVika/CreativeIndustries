@@ -7,7 +7,7 @@
     ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("events");
 }
 
-<a asp-action="CreateEvent">@SharedLocalizer.GetLocalizedHtmlString("addEvent")</a>
+<h4>@SharedLocalizer.GetLocalizedHtmlString("events")</h4>
 
 <table class="table">
     <tr><th>@SharedLocalizer.GetLocalizedHtmlString("name")</th><th>@SharedLocalizer.GetLocalizedHtmlString("description")</th><th>@SharedLocalizer.GetLocalizedHtmlString("author")</th><th></th></tr>
@@ -18,7 +18,11 @@
             <td>@compEvent.Description</td>
             <td>@compEvent.Author</td>
             <td>
-                <a asp-action="EditEvent" asp-route-id="@compEvent.Id">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
+                <form asp-action="EditEvent" asp-route-id="@compEvent.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-light">
+                        @SharedLocalizer.GetLocalizedHtmlString("edit")
+                    </button>
+                </form>
             </td>
             <td>
                 <form asp-action="DeleteEvent" asp-route-id="@compEvent.Id" method="post">

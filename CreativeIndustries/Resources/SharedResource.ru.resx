@@ -120,6 +120,11 @@
   <data name="about" xml:space="preserve">
     <value>О нас</value>
   </data>
+  <data name="aboutDescr" xml:space="preserve">
+    <value>На этой странице вы можете ознакомиться с новостями и событиями наших партнеров.
+     Выберите ниже, что вы хотите узнать.
+     Спасибо за Ваш интерес!)</value>
+  </data>
   <data name="aboutProj" xml:space="preserve">
     <value>Креативные индустрии — сектор экономики, связанный с интеллектуальной деятельностью, 
 развивающийся преимущественно на идеях и технологиях(научно-исследовательская деятельность, 
@@ -130,6 +135,9 @@
   </data>
   <data name="Add" xml:space="preserve">
     <value>Добавить</value>
+  </data>
+  <data name="addCompany" xml:space="preserve">
+    <value>Добавить компанию</value>
   </data>
   <data name="addEvent" xml:space="preserve">
     <value>Добавить событие</value>
@@ -170,17 +178,8 @@
   <data name="create" xml:space="preserve">
     <value>Создать</value>
   </data>
-  <data name="createCompany" xml:space="preserve">
-    <value>Партнеры</value>
-  </data>
-  <data name="createEvent" xml:space="preserve">
-    <value>События</value>
-  </data>
   <data name="createNewAccount" xml:space="preserve">
     <value>Создать новый аккаунт</value>
-  </data>
-  <data name="createNews" xml:space="preserve">
-    <value>Новости</value>
   </data>
   <data name="delete" xml:space="preserve">
     <value>Удалить</value>

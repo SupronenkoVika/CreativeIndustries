@@ -1,3 +1,4 @@
+using CreativeIndustries.API;
 using CreativeIndustries.API.Controllers;
 using CreativeIndustries.API.Mappings;
 using CreativeIndustries.DS.DB.EF;
@@ -15,6 +16,9 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
 // Add services to the container.
+
+
+
 services.AppServicesExtension();
 
 services.AddSingleton<LocService>();
@@ -69,6 +73,22 @@ services.AddControllers().AddApplicationPart(typeof(AccountController).Assembly)
 services.AddAutoMapper(typeof(CompanyProfile), typeof(NewsProfile), typeof(EventProfile));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var serv = scope.ServiceProvider;
+    try
+    {
+        var userManager = serv.GetRequiredService<UserManager<User>>();
+        var rolesManager = serv.GetRequiredService<RoleManager<IdentityRole>>();
+        await RoleInitializer.InitializeAsync(userManager, rolesManager);
+    }
+    catch (Exception ex)
+    {
+        var logger = serv.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while seeding the database.");
+    }
+}
 
 app.UseRequestLocalization();
 
