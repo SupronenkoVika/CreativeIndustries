@@ -172,6 +172,9 @@ design, television, music, fashion, architecture, software development and other
   <data name="companyName" xml:space="preserve">
     <value>Сompany name</value>
   </data>
+  <data name="confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
   <data name="confirmPassword" xml:space="preserve">
     <value>Confirm password</value>
   </data>
@@ -276,6 +279,9 @@ design, television, music, fashion, architecture, software development and other
   </data>
   <data name="sendToAll" xml:space="preserve">
     <value>Send to all users</value>
+  </data>
+  <data name="sentSuccessfully" xml:space="preserve">
+    <value>Email has been sent successfully!</value>
   </data>
   <data name="subject" xml:space="preserve">
     <value>Subject</value>

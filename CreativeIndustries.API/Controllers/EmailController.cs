@@ -38,20 +38,6 @@ namespace CreativeIndustries.API.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult SendEmailToAllUsers(MailDataViewModel emailData)
-        {
-            bool result = _mail.SendMailToAllUsers(emailData);
-            if (result)
-            {
-                return RedirectToAction("SentEmail");
-            }
-            else
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occured. The Mail could not be sent.");
-            }
-        }
-
         public IActionResult SentEmail()
         {
             ViewData["Success"] = "Email has been sent successfully!";

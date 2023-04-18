@@ -172,6 +172,9 @@
   <data name="companyName" xml:space="preserve">
     <value>Назва</value>
   </data>
+  <data name="confirmation" xml:space="preserve">
+    <value>Пацвярджэнне</value>
+  </data>
   <data name="confirmPassword" xml:space="preserve">
     <value>Пацвердзіце пароль</value>
   </data>
@@ -276,6 +279,9 @@
   </data>
   <data name="sendToAll" xml:space="preserve">
     <value>Адправіць усім карыстальнікам</value>
+  </data>
+  <data name="sentSuccessfully" xml:space="preserve">
+    <value>Электронны ліст быў паспяхова адпраўлены!</value>
   </data>
   <data name="subject" xml:space="preserve">
     <value>Тэма</value>
