@@ -18,11 +18,7 @@
             <td>@compEvent.Description</td>
             <td>@compEvent.Author</td>
             <td>
-                <form asp-action="EditEvent" asp-route-id="@compEvent.Id" method="post">
-                    <button type="submit" class="btn btn-sm btn-light">
-                        @SharedLocalizer.GetLocalizedHtmlString("edit")
-                    </button>
-                </form>
+                <a class="btn btn-sm btn-light" asp-action="EditEvent" asp-route-id="@compEvent.Id" method="post">@SharedLocalizer.GetLocalizedHtmlString("edit")</a>
             </td>
             <td>
                 <form asp-action="DeleteEvent" asp-route-id="@compEvent.Id" method="post">

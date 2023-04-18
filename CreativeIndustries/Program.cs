@@ -17,8 +17,6 @@ var services = builder.Services;
 
 // Add services to the container.
 
-
-
 services.AppServicesExtension();
 
 services.AddSingleton<LocService>();
@@ -108,8 +106,12 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseStatusCodePagesWithRedirects("/error/{0}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Map("/error/{statusCode}", (int statusCode) => $"Error. You don't have access to this part: {statusCode}");
 
 app.Run();
